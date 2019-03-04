@@ -53,9 +53,11 @@ class AlbumsController extends Controller
     public function edit($id)
     {
         $album = $this->albumEloquent->find($id);
+        $artists = $this->artistEloquent->get();
         return view('albums.edit')->with([
             'isCreate' => false,
             'album' => $album,
+            'artists' => $artists,
         ]);
     }
 

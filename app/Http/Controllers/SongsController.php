@@ -53,9 +53,11 @@ class SongsController extends Controller
     public function edit($id)
     {
         $song = $this->songEloquent->find($id);
+        $albums = $this->albumEloquent->get();
         return view('songs.edit')->with([
             'isCreate' => false,
             'song' => $song,
+            'albums' => $albums,
         ]);
     }
 
