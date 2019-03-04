@@ -24,8 +24,8 @@ class AlbumRequest extends FormRequest
     public function rules()
     {
         return [
-            'artist_id' => 'required:integer',
-            'name' => 'required',
+            'album.artist_id' => 'required:integer',
+            'album.name' => 'required',
         ];
     }
 }

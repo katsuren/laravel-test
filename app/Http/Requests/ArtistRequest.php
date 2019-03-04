@@ -24,7 +24,7 @@ class ArtistRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'artist.name' => 'required',
         ];
     }
 }

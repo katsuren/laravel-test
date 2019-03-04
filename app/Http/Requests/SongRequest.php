@@ -24,8 +24,8 @@ class SongRequest extends FormRequest
     public function rules()
     {
         return [
-            'album_id' => 'required:integer',
-            'name' => 'required',
+            'song.album_id' => 'required:integer',
+            'song.name' => 'required',
         ];
     }
 }
