@@ -3,9 +3,12 @@
 namespace App\Eloquents;
 
 use Illuminate\Database\Eloquent\Model;
+use Jedrzej\Pimpable\PimpableTrait;
 
 class Artist extends Model
 {
+    use PimpableTrait;
+
     /**
      * The attributes that are mass assignable.
      *

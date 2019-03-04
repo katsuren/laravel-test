@@ -3,9 +3,12 @@
 namespace App\Eloquents;
 
 use Illuminate\Database\Eloquent\Model;
+use Jedrzej\Pimpable\PimpableTrait;
 
 class Album extends Model
 {
+    use PimpableTrait;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -14,6 +17,8 @@ class Album extends Model
     protected $guarded = [
         'id',
     ];
+
+    protected $searchable = ['*'];
 
     public function artist()
     {
